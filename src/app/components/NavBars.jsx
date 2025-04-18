@@ -13,9 +13,21 @@ const NavBars = () => {
     return (
         <nav className="bg-black p-4 relative">
             <div className="container mx-auto flex md:flex-row justify-between items-center">
-                <div className="text-white font-bold text-lg">
-                    <a href="/">Komon Thungmanee</a>
+                {/* Logo and Name */}
+                <div className="flex items-center">
+                    <a href="/">
+                        <img
+                            src="/img/P1.jpg"
+                            alt="Profile"
+                            className="w-10 h-10 rounded-full mr-3"
+                        />
+                    </a>
+                    <div className="text-white font-bold text-lg">
+                        <a href="/">Komon Thungmanee</a>
+                    </div>
                 </div>
+
+                {/* Mobile Menu Button */}
                 <button
                     className="text-white absolute right-3 md:hidden focus:outline-none"
                     aria-label="Toggle Menu"
@@ -36,10 +48,10 @@ const NavBars = () => {
                         />
                     </svg>
                 </button>
+
+                {/* Navigation Links */}
                 <div
-                    className={`${
-                        isMenuOpen ? 'block' : 'hidden'
-                    } w-full md:flex md:items-center md:w-auto`}
+                    className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:flex md:items-center md:w-auto`}
                 >
                     <div className="flex flex-col md:flex-row md:space-x-4">
                         <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/">
@@ -57,8 +69,13 @@ const NavBars = () => {
                         <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/contact">
                             Contact
                         </a>
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/Follow">
+                            Follow Me
+                        </a>
                     </div>
                 </div>
+
+                {/* Contact Info */}
                 <div className="hidden md:flex text-white">
                     <a href="tel:+66923959606" className="hover:text-blue-500 flex items-center">
                         <svg

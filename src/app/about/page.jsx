@@ -16,6 +16,7 @@ function AboutPage() {
                 <p className="mt-2 text-lg text-2xl w-[850px]" data-aos="fade-up" data-aos-delay="200">
                     Hello, my name is Nueng. I specialize in web design, including both Frontend and Backend development. Additionally, I have experience working with Arduino boards and ESP modules. I possess a wide range of technological skills, as listed below:
                 </p>
+                <div className="my-6 border-t-2 border-gray-500 w-1/2 mx-15" data-aos="fade-up" data-aos-delay="300"></div>
                 <p className="mt-4" data-aos="fade-up" data-aos-delay="400">
                     <strong>SKILLS</strong><br />
                     Frontend Development: HTML, CSS, JSON, Tailwind<br />

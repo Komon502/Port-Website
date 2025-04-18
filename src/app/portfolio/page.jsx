@@ -78,11 +78,30 @@ function PortfolioPage() {
                         <div className="p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="600">
                             <h3 className="text-2xl font-bold mb-4">Python Essentials 1 by Cisco</h3>
                                 <img
-                                    src='/certificate/C3.jpg'
+                                    src='/certificate/C4.jpg'
                                     alt="Python Essentials 1 by Cisco"
                                     className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300"
                                 />
                         </div>
+
+                        <div className="p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                            <h3 className="text-2xl font-bold mb-4">Build ESP32 IoT Smart Garden with Blynk App by Alison</h3>
+                                <img
+                                    src='/certificate/C5.jpg'
+                                    alt="Build ESP32 IoT Smart Garden with Blynk App by Alison"
+                                    className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300"
+                                />
+                        </div>
+
+                        <div className="p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                            <h3 className="text-2xl font-bold mb-4">A Guide to Meeting Arduino and LabView by Alison</h3>
+                                <img
+                                    src='/certificate/C6.jpg'
+                                    alt="A Guide to Meeting Arduino and LabView by Alison"
+                                    className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300"
+                                />
+                        </div>
+
                     </div>
                 </div>
             </div>

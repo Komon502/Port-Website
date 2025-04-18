@@ -9,7 +9,12 @@ function ContactPage() {
     }, []);
 
     return (
-        <div className="relative overflow-hidden bg-cover bg-center h-screen" style={{ backgroundImage: "url('/img/BG4.jpg')", backgroundPosition: "center", backgroundSize: "cover" }}>
+        <div
+            className="relative overflow-hidden h-screen"
+            style={{
+                background: "linear-gradient(135deg, #1f1f1f, #121212)",
+            }}
+        >
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="container mx-auto relative z-10 py-6 text-white">
                 <h1 className="text-5xl font-bold text-center" data-aos="fade-up">Contact Me</h1>
