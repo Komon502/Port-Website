@@ -83,21 +83,21 @@ function ExperiencePage() {
                                 </div>
                                 <p className="mb-4 w-full">{exp.description}</p>
                                 {exp.image && (
-                                    <div className="w-full mb-2">
-                                        <div className="relative w-full aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-2">
-                                            <Image
-                                                src={exp.image}
-                                                alt={exp.imageDesc || exp.role}
-                                                fill
-                                                className="object-cover"
-                                                sizes="100vw"
-                                            />
-                                        </div>
+                                    <div className="w-full rounded-lg overflow-hidden mb-2">
+                                        <Image
+                                            src={exp.image}
+                                            alt={exp.imageDesc || exp.role}
+                                            width={800}
+                                            height={600}
+                                            className="object-cover w-full h-auto"
+                                            sizes="100vw"
+                                        />
                                         {exp.imageDesc && (
                                             <p className="text-sm text-gray-400">{exp.imageDesc}</p>
                                         )}
                                     </div>
                                 )}
+
                             </div>
                         ))}
                     </div>
