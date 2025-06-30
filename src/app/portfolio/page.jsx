@@ -14,11 +14,19 @@ function PortfolioPage() {
             title: "Mobile App Project",
             image: "/img/GitHub.png",
             delay: 400,
+            link: "https://github.com/Komon502/PJ-MB",
         },
         {
-            title: "Web Development Project",
+            title: "Port Website",
             image: "/img/GitHub.png",
             delay: 500,
+            link: "https://github.com/Komon502/Port-Website",
+        },
+        {
+            title: "Web Dino Pop Game",
+            image: "/img/GitHub.png",
+            delay: 600,
+            link: "https://github.com/Komon502/POP-Dino",
         },
     ];
 
