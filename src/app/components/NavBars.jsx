@@ -72,6 +72,9 @@ const NavBars = () => {
                         <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/Follow">
                             Follow Me
                         </a>
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/stock">
+                            Stock
+                        </a>
                     </div>
                 </div>
 
