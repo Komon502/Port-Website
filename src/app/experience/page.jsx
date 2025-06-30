@@ -11,7 +11,6 @@ function ExperiencePage() {
 
     // === Work Experience Section ===
     const experiences = [
-        // 1. พนักงาน 7-11
         {
             company: "7-Eleven",
             role: "Part-time Employee",
@@ -22,7 +21,6 @@ function ExperiencePage() {
             imageDesc: "Working atmosphere at 7-Eleven",
             delay: 400,
         },
-        // 2. ฟรีแลนซ์ fastwork
         {
             company: "Fastwork",
             role: "Freelance (Web Developer)",
@@ -33,7 +31,6 @@ function ExperiencePage() {
             imageDesc: "My profile at Fastwork",
             delay: 500,
         },
-        // 3. Partner Amway
         {
             company: "Amway",
             role: "ABO Partner",
@@ -45,8 +42,6 @@ function ExperiencePage() {
             delay: 600,
         },
     ];
-
-    // ... (skills section เหมือนเดิม)
 
     return (
         <div className="min-h-screen bg-black">
@@ -62,11 +57,11 @@ function ExperiencePage() {
                 {/* === Work Experience Section === */}
                 <section className="mb-20">
                     <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Work Experience</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         {experiences.map((exp, index) => (
                             <div
                                 key={index}
-                                className="p-6 bg-gray-900 rounded-xl shadow-lg flex flex-col items-center"
+                                className="p-6 bg-gray-900 rounded-xl shadow-lg flex flex-col items-center w-full"
                                 data-aos="fade-up"
                                 data-aos-delay={exp.delay}
                             >
@@ -89,7 +84,7 @@ function ExperiencePage() {
                                 <p className="mb-4 w-full">{exp.description}</p>
                                 {exp.image && (
                                     <div className="w-full mb-2">
-                                        <div className="relative w-full h-48 rounded-lg overflow-hidden mb-2">
+                                        <div className="relative w-full aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-2">
                                             <Image
                                                 src={exp.image}
                                                 alt={exp.imageDesc || exp.role}
@@ -108,8 +103,20 @@ function ExperiencePage() {
                     </div>
                 </section>
 
-                {/* Skills Section (เหมือนเดิม) */}
-                {/* ... */}
+                {/* === Skills Section === */}
+                <section className="mb-20">
+                    <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Skills</h2>
+                    <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">HTML</span>
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">CSS</span>
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">JavaScript</span>
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">React</span>
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">Next.js</span>
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">Tailwind CSS</span>
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">UI/UX Design</span>
+                        <span className="px-4 py-2 bg-gray-800 rounded-full">Git</span>
+                    </div>
+                </section>
             </div>
         </div>
     );
