@@ -69,16 +69,23 @@ function PortfolioPage() {
                                 data-aos-delay={project.delay}
                             >
                                 <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                                <div className="relative w-full h-[180px] mb-4">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        fill
-                                        className="object-contain rounded-lg hover:scale-105 transition-transform duration-300"
-                                        sizes="(max-width: 768px) 100vw, 500px"
-                                        priority
-                                    />
-                                </div>
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block"
+                                >
+                                    <div className="relative w-full h-[180px] mb-4">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-contain rounded-lg hover:scale-105 transition-transform duration-300"
+                                            sizes="(max-width: 768px) 100vw, 500px"
+                                            priority
+                                        />
+                                    </div>
+                                </a>
                             </div>
                         ))}
                     </div>
