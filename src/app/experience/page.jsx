@@ -102,21 +102,6 @@ function ExperiencePage() {
                         ))}
                     </div>
                 </section>
-
-                {/* === Skills Section === */}
-                <section className="mb-20">
-                    <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Skills</h2>
-                    <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">HTML</span>
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">CSS</span>
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">JavaScript</span>
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">React</span>
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">Next.js</span>
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">Tailwind CSS</span>
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">UI/UX Design</span>
-                        <span className="px-4 py-2 bg-gray-800 rounded-full">Git</span>
-                    </div>
-                </section>
             </div>
         </div>
     );
