@@ -32,7 +32,7 @@ function Resume() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                     <a
-                        href="/resume/Komon Thungmanee.pdf"
+                        href="/resume/Komon-Thungmanee.pdf"
                         download
                         className="mt-4 inline-block text-black bg-white border-2 border-white hover:bg-transparent hover:text-white hover:border-white font-bold py-3 px-6 rounded-full transition-all duration-300"
                         data-aos="zoom-in"
