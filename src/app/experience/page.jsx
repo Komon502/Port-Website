@@ -50,7 +50,7 @@ function ExperiencePage() {
                 <header className="text-center mb-16">
                     <h1 className="text-5xl font-bold mb-4" data-aos="fade-up">Experience</h1>
                     <p className="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                        Here are my professional experiences and relevant skills.
+                        Here are my professional experiences.
                     </p>
                 </header>
 
