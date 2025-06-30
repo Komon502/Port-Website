@@ -9,6 +9,7 @@ function ExperiencePage() {
         AOS.init({ duration: 1000, once: true });
     }, []);
 
+    // เพิ่ม property image และ description ในแต่ละงาน
     const experiences = [
         {
             company: "ABC Tech Solutions",
@@ -16,6 +17,8 @@ function ExperiencePage() {
             period: "Jan 2022 - Present",
             description: "Developed and maintained web applications using React.js and Next.js.",
             logo: "/img/company1.png",
+            image: "/img/exp1.jpg", // ตัวอย่างภาพประกอบงาน
+            imageDesc: "Web application dashboard for ABC Tech Solutions.",
             delay: 400,
         },
         {
@@ -24,6 +27,8 @@ function ExperiencePage() {
             period: "Jun 2021 - Dec 2021",
             description: "Assisted in building internal tools and automation scripts with Python.",
             logo: "/img/company2.png",
+            image: "/img/exp2.jpg",
+            imageDesc: "Automation tool interface developed at XYZ Innovations.",
             delay: 500,
         },
     ];
@@ -36,12 +41,7 @@ function ExperiencePage() {
     ];
 
     return (
-        <div
-            className="relative bg-cover bg-center min-h-screen"
-            style={{ backgroundImage: "url(/img/background.jpg)" }}
-        >
-            <div className="absolute inset-0 bg-black opacity-70"></div>
-
+        <div className="min-h-screen bg-black">
             <div className="relative z-10 container mx-auto py-12 px-4 text-white">
                 {/* Header */}
                 <header className="text-center mb-16">
@@ -54,29 +54,47 @@ function ExperiencePage() {
                 {/* Experience Section */}
                 <section className="mb-20">
                     <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Work Experience</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {experiences.map((exp, index) => (
                             <div
                                 key={index}
-                                className="p-5 bg-gray-800 rounded-xl shadow-lg flex items-center"
+                                className="p-6 bg-gray-900 rounded-xl shadow-lg flex flex-col items-center"
                                 data-aos="fade-up"
                                 data-aos-delay={exp.delay}
                             >
-                                <div className="relative w-20 h-20 mr-6">
-                                    <Image
-                                        src={exp.logo}
-                                        alt={exp.company}
-                                        fill
-                                        className="object-contain rounded-lg"
-                                        sizes="80px"
-                                    />
+                                <div className="flex items-center mb-4 w-full">
+                                    <div className="relative w-16 h-16 mr-4">
+                                        <Image
+                                            src={exp.logo}
+                                            alt={exp.company}
+                                            fill
+                                            className="object-contain rounded-lg"
+                                            sizes="64px"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-bold">{exp.role}</h3>
+                                        <p className="text-lg">{exp.company}</p>
+                                        <p className="text-sm text-gray-400">{exp.period}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 className="text-2xl font-bold">{exp.role}</h3>
-                                    <p className="text-lg">{exp.company}</p>
-                                    <p className="text-sm text-gray-400">{exp.period}</p>
-                                    <p className="mt-2">{exp.description}</p>
-                                </div>
+                                <p className="mb-4 w-full">{exp.description}</p>
+                                {exp.image && (
+                                    <div className="w-full mb-2">
+                                        <div className="relative w-full h-48 rounded-lg overflow-hidden mb-2">
+                                            <Image
+                                                src={exp.image}
+                                                alt={exp.imageDesc || exp.role}
+                                                fill
+                                                className="object-cover"
+                                                sizes="100vw"
+                                            />
+                                        </div>
+                                        {exp.imageDesc && (
+                                            <p className="text-sm text-gray-400">{exp.imageDesc}</p>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
