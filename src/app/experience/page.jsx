@@ -4,90 +4,112 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const experiences = [
-    {
-        id: "tech-solutions",
-        company: "Tech Solutions Inc.",
-        role: "Frontend Developer",
-        period: "Jan 2022 - Present",
-        description:
-            "Developed and maintained web applications using React and Next.js. Collaborated with designers to create responsive and user-friendly interfaces.",
-    },
-    {
-        id: "creative-studio",
-        company: "Creative Studio",
-        role: "UI/UX Designer",
-        period: "Jun 2020 - Dec 2021",
-        description:
-            "Designed wireframes and prototypes for client projects. Worked closely with developers to ensure seamless implementation.",
-    },
-    {
-        id: "startup-hub",
-        company: "Startup Hub",
-        role: "Intern Developer",
-        period: "Jan 2020 - May 2020",
-        description:
-            "Assisted in building MVPs for startups using modern JavaScript frameworks. Gained hands-on experience in agile development.",
-    },
-];
-
-export default function ExperiencePage() {
+function ExperiencePage() {
     useEffect(() => {
-        AOS.init({ duration: 800 });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
+    const experiences = [
+        {
+            company: "ABC Tech Solutions",
+            role: "Frontend Developer",
+            period: "Jan 2022 - Present",
+            description: "Developed and maintained web applications using React.js and Next.js.",
+            logo: "/img/company1.png",
+            delay: 400,
+        },
+        {
+            company: "XYZ Innovations",
+            role: "Intern Software Engineer",
+            period: "Jun 2021 - Dec 2021",
+            description: "Assisted in building internal tools and automation scripts with Python.",
+            logo: "/img/company2.png",
+            delay: 500,
+        },
+    ];
+
+    const skills = [
+        { name: "React.js", icon: "/img/skills/react.png", delay: 400 },
+        { name: "Next.js", icon: "/img/skills/nextjs.png", delay: 500 },
+        { name: "Python", icon: "/img/skills/python.png", delay: 600 },
+        { name: "Tailwind CSS", icon: "/img/skills/tailwind.png", delay: 700 },
+    ];
+
     return (
-        <main className="max-w-3xl mx-auto px-4 py-12">
-            {/* Banner */}
-            <div className="relative mb-12 rounded-xl overflow-hidden shadow-lg">
-                <Image
-                    src="/banner-experience.jpg"
-                    alt="Experience Banner"
-                    width={1200}
-                    height={300}
-                    className="w-full h-56 object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-800/80 to-indigo-400/60 flex items-center justify-center">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-                        My Experience
-                    </h1>
-                </div>
-            </div>
+        <div
+            className="relative bg-cover bg-center min-h-screen"
+            style={{ backgroundImage: "url(/img/background.jpg)" }}
+        >
+            <div className="absolute inset-0 bg-black opacity-70"></div>
 
-            {/* Quick Links */}
-            <nav className="flex flex-wrap gap-4 justify-center mb-10">
-                {experiences.map((exp) => (
-                    <a
-                        key={exp.id}
-                        href={`#${exp.id}`}
-                        className="px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 font-medium hover:bg-indigo-200 transition"
-                    >
-                        {exp.company}
-                    </a>
-                ))}
-            </nav>
+            <div className="relative z-10 container mx-auto py-12 px-4 text-white">
+                {/* Header */}
+                <header className="text-center mb-16">
+                    <h1 className="text-5xl font-bold mb-4" data-aos="fade-up">Experience</h1>
+                    <p className="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                        Here are my professional experiences and relevant skills.
+                    </p>
+                </header>
 
-            {/* Experience List */}
-            <div className="space-y-10">
-                {experiences.map((exp, idx) => (
-                    <section
-                        key={exp.id}
-                        id={exp.id}
-                        data-aos="fade-up"
-                        className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8 border-l-8 border-indigo-500"
-                    >
-                        <div className="flex justify-between items-center mb-2">
-                            <h2 className="text-2xl font-semibold">{exp.company}</h2>
-                            <span className="text-sm text-gray-500">{exp.period}</span>
-                        </div>
-                        <h3 className="text-lg font-medium text-indigo-600 mb-2">
-                            {exp.role}
-                        </h3>
-                        <p className="text-gray-700 dark:text-gray-300">{exp.description}</p>
-                    </section>
-                ))}
+                {/* Experience Section */}
+                <section className="mb-20">
+                    <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Work Experience</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {experiences.map((exp, index) => (
+                            <div
+                                key={index}
+                                className="p-5 bg-gray-800 rounded-xl shadow-lg flex items-center"
+                                data-aos="fade-up"
+                                data-aos-delay={exp.delay}
+                            >
+                                <div className="relative w-20 h-20 mr-6">
+                                    <Image
+                                        src={exp.logo}
+                                        alt={exp.company}
+                                        fill
+                                        className="object-contain rounded-lg"
+                                        sizes="80px"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-bold">{exp.role}</h3>
+                                    <p className="text-lg">{exp.company}</p>
+                                    <p className="text-sm text-gray-400">{exp.period}</p>
+                                    <p className="mt-2">{exp.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Skills Section */}
+                <section className="mb-20">
+                    <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Skills & Tools</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        {skills.map((skill, index) => (
+                            <div
+                                key={index}
+                                className="flex flex-col items-center p-5 bg-gray-800 rounded-xl shadow-lg"
+                                data-aos="fade-up"
+                                data-aos-delay={skill.delay}
+                            >
+                                <div className="relative w-16 h-16 mb-3">
+                                    <Image
+                                        src={skill.icon}
+                                        alt={skill.name}
+                                        fill
+                                        className="object-contain"
+                                        sizes="64px"
+                                    />
+                                </div>
+                                <span className="text-lg font-semibold">{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
-        </main>
+        </div>
     );
 }
+
+export default ExperiencePage;
