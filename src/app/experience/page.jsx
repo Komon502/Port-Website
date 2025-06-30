@@ -36,7 +36,7 @@ function ExperiencePage() {
             role: "ABO Partner",
             period: "2025 - ปัจจุบัน",
             description: "Present products and build a network of Amway business partners",
-            logo: "/Experience/amway.png",
+            logo: "/Experience/amway.jpg",
             image: "/Experience/3.jpg",
             imageDesc: "Amway activities and product presentations",
             delay: 600,
