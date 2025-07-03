@@ -48,38 +48,35 @@ const NavBars = () => {
                     </svg>
                 </button>
 
-                {/* Navigation Links */}
+              {/* Navigation Links */}
                 <div
-                    className={`
-        ${isMenuOpen ? 'block' : 'hidden'}
-        absolute top-full left-0 w-full bg-black md:static md:block md:w-auto
-    `}
+                   className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:flex md:items-center md:w-auto`}
                 >
+                      
                     <div className="flex flex-col md:flex-row md:space-x-4">
-                        <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/">
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/">
                             Home
                         </a>
-                        <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/about">
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/about">
                             About
                         </a>
-                        <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/resume">
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/resume">
                             Resume
                         </a>
-                        <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/portfolio">
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/portfolio">
                             Portfolio
                         </a>
-                        <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/contact">
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/contact">
                             Contact
                         </a>
-                        <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/Follow">
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/Follow">
                             Follow Me
                         </a>
-                        <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/experience">
-                            Experience
+                        <a className="text-white hover:text-blue-500 py-2 md:py-0" href="/experience">
+                            Experince
                         </a>
                     </div>
                 </div>
-
 
                 {/* Contact Info */}
                 <div className="hidden md:flex text-white">
