@@ -12,7 +12,7 @@ const NavBars = () => {
 
     return (
         <nav className="bg-black p-4 relative">
-            <div className="container mx-auto flex md:flex-row justify-between items-center">
+            <div className="container mx-auto md:flex md:flex-row justify-between items-center relative">
                 {/* Logo and Name */}
                 <div className="flex items-center">
                     <a href="/">
@@ -52,9 +52,9 @@ const NavBars = () => {
                 {/* Navigation Links */}
                 <div
                     className={`
-        ${isMenuOpen ? 'block' : 'hidden'}
-        absolute top-full left-0 w-full bg-black md:static md:block md:w-auto
-    `}
+                        ${isMenuOpen ? 'block' : 'hidden'}
+                        absolute top-full left-0 w-full bg-black md:static md:block md:w-auto z-50 transition-all duration-300 ease-in-out
+                    `}
                 >
                     <div className="flex flex-col md:flex-row md:space-x-4">
                         <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/">
@@ -80,7 +80,6 @@ const NavBars = () => {
                         </a>
                     </div>
                 </div>
-
 
                 {/* Contact Info */}
                 <div className="hidden md:flex text-white">
