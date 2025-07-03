@@ -50,10 +50,12 @@ const NavBars = () => {
 
                 {/* Navigation Links */}
                 <div
-        className={`${
-            isMenuOpen ? 'block' : 'hidden'
-        } absolute top-full left-0 w-full bg-black md:static md:block md:w-auto`}
-    >
+                    className={`
+        ${isMenuOpen ? 'block' : 'hidden'}
+        absolute top-full left-0 w-full bg-black md:static md:block md:w-auto
+    `}
+                >
+                    <div className="flex flex-col md:flex-row md:space-x-4">
                         <a className="text-white hover:text-blue-500 py-2 md:py-0 px-4 md:px-0" href="/">
                             Home
                         </a>
@@ -76,6 +78,8 @@ const NavBars = () => {
                             Experience
                         </a>
                     </div>
+                </div>
+
 
                 {/* Contact Info */}
                 <div className="hidden md:flex text-white">
