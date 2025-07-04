@@ -39,6 +39,7 @@ function PortfolioPage() {
         { src: "/certificate/C6.jpg", title: "A Guide to Meeting Arduino and LabView by Alison", delay: 900 },
         { src: "/certificate/C7.png", title: "Python Essentials 2 by Cisco", delay: 1000 },
         { src: "/certificate/number8.png", title: "Create a website with MailChimp", delay: 1100 },
+        { src: "/certificate/C9.png", title: "Crash Course on Python", delay: 1100 },
     ];
 
     return (
