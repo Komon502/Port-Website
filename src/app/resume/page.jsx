@@ -37,7 +37,15 @@ function Resume() {
                         className="mt-4 inline-block text-black bg-white border-2 border-white hover:bg-transparent hover:text-white hover:border-white font-bold py-3 px-6 rounded-full transition-all duration-300"
                         data-aos="zoom-in"
                     >
-                        Download Resume
+                        Download Resume 1
+                    </a>
+                    <a
+                        href="/resume/Komon-Thungmanee-Resume.pdf"
+                        download
+                        className="mt-4 inline-block text-black bg-white border-2 border-white hover:bg-transparent hover:text-white hover:border-white font-bold py-3 px-6 rounded-full transition-all duration-300"
+                        data-aos="zoom-in"
+                    >
+                        Download Resume 2
                     </a>
                 </div>
             </div>
