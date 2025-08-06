@@ -28,6 +28,12 @@ function PortfolioPage() {
             delay: 600,
             link: "https://github.com/Komon502/POP-Dino",
         },
+        {
+            title: "thai-shop-review",
+            image: "/img/GitHub.png",
+            delay: 600,
+            link: "https://github.com/Komon502/thai-shop-review",
+        },
     ];
 
     const certificates = [
@@ -114,6 +120,16 @@ function PortfolioPage() {
                                     />
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Project Collab Section */}
+                <section className="mb-20">
+                    <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Project Collab กับเพื่อน</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {collabProjects.map((project, idx) => (
+                            <CollabProjectCard key={idx} project={project} />
                         ))}
                     </div>
                 </section>
