@@ -53,7 +53,7 @@ function PortfolioPage() {
             techStack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
             features: [
                 "User authentication and authorization",
-                "Shop review and rating system", 
+                "Shop review and rating system",
                 "Responsive design for mobile and desktop",
                 "Database integration with MySQL",
                 "RESTful API development"
@@ -108,7 +108,7 @@ function PortfolioPage() {
                                         <div className="text-gray-400 text-center">
                                             <div className="w-16 h-16 mx-auto mb-2 bg-gray-600 rounded-lg flex items-center justify-center">
                                                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1.9 1.6 2.5 1.2 3.2.9.1-.7.3-1.2.5-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .1.9-.3 1.8-.4 2.7-.4s1.8.1 2.7.4c2.1-.4 3-.1 3-.1.6 1</svg>.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.6.8.6 1.7v2.6c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.65 18.35.5 12 .5z"/>
+                                                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1.9 1.6 2.5 1.2 3.2.9.1-.7.3-1.2.5-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .1.9-.3 1.8-.4 2.7-.4s1.8.1 2.7.4c2.1-.4 3-.1 3-.1.6 1</svg>.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.6.8.6 1.7v2.6c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.65 18.35.5 12 .5z" />
                                                 </svg>
                                             </div>
                                             <span className="text-sm">GitHub Project</span>
@@ -130,20 +130,18 @@ function PortfolioPage() {
                                 className="p-5 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-750 transition-all duration-300"
                             >
                                 <h3 className="text-lg font-semibold mb-4">{cert.title}</h3>
-                                <div className="relative w-full h-[180px] mb-4 bg-gray-700 rounded-lg flex items-center justify-center">
-                                    <div className="text-gray-400 text-center">
-                                        <div className="w-16 h-16 mx-auto mb-2 bg-gray-600 rounded-lg flex items-center justify-center">
-                                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                                            </svg>
-                                        </div>
-                                        <span className="text-sm">Certificate</span>
-                                    </div>
+                                <div className="relative w-full h-[180px] mb-4 bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
+                                    <img
+                                        src={cert.src}
+                                        alt={cert.title}
+                                        className="object-contain w-full h-full"
+                                    />
                                 </div>
                             </div>
                         ))}
                     </div>
                 </section>
+
 
                 {/* Other Projects Section */}
                 <section className="mb-20">
@@ -160,18 +158,18 @@ function PortfolioPage() {
                                 <div className="relative w-full h-[180px] mb-4 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 rounded-lg overflow-hidden">
                                     {/* Animated background */}
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10 transform -skew-x-12 animate-pulse"></div>
-                                    
+
                                     {/* Content */}
                                     <div className="relative h-full flex flex-col items-center justify-center text-white p-4">
                                         <div className="w-16 h-16 mb-3 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
                                             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2M11 7H13V9H11V7M11 11H13V17H11V11Z"/>
+                                                <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2M11 7H13V9H11V7M11 11H13V17H11V11Z" />
                                             </svg>
                                         </div>
                                         <span className="text-sm font-semibold text-center">{project.title}</span>
                                         <span className="text-xs text-blue-200 mt-1">Click to view details</span>
                                     </div>
-                                    
+
                                     {/* Tech stack preview */}
                                     <div className="absolute bottom-2 left-2 right-2">
                                         <div className="flex justify-center gap-1">
@@ -235,7 +233,7 @@ function PortfolioPage() {
             {/* Modal */}
             {selectedProject && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-                    <div 
+                    <div
                         className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-sm"
                         onClick={closeModal}
                     ></div>
@@ -249,7 +247,7 @@ function PortfolioPage() {
                                 <X className="w-6 h-6 text-gray-400 hover:text-white" />
                             </button>
                         </div>
-                        
+
                         <div className="p-6">
                             {/* Project Preview */}
                             <div className="relative w-full h-64 mb-6 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl overflow-hidden">
@@ -259,7 +257,7 @@ function PortfolioPage() {
                                     <div className="absolute bottom-6 right-6 w-24 h-24 bg-white bg-opacity-10 rounded-full blur-lg"></div>
                                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white bg-opacity-5 rounded-full blur-2xl"></div>
                                 </div>
-                                
+
                                 {/* Mock browser window */}
                                 <div className="relative h-full p-6 flex flex-col">
                                     <div className="bg-white bg-opacity-15 rounded-lg p-4 backdrop-blur-sm flex-1 flex flex-col">
@@ -272,12 +270,12 @@ function PortfolioPage() {
                                                 <span className="text-white text-xs opacity-70">{selectedProject.title}.app</span>
                                             </div>
                                         </div>
-                                        
+
                                         {/* Mock content */}
                                         <div className="flex-1 flex flex-col justify-center items-center text-white">
                                             <div className="w-16 h-16 mb-3 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
                                                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2M11 7H13V9H11V7M11 11H13V17H11V11Z"/>
+                                                    <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2M11 7H13V9H11V7M11 11H13V17H11V11Z" />
                                                 </svg>
                                             </div>
                                             <h4 className="text-lg font-bold mb-1">{selectedProject.title}</h4>
@@ -304,7 +302,7 @@ function PortfolioPage() {
                                     <h4 className="text-lg font-semibold text-white mb-3">Tech Stack</h4>
                                     <div className="flex flex-wrap gap-2">
                                         {selectedProject.techStack.map((tech, index) => (
-                                            <span 
+                                            <span
                                                 key={index}
                                                 className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full"
                                             >
