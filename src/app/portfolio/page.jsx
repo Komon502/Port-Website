@@ -28,12 +28,6 @@ function PortfolioPage() {
             delay: 600,
             link: "https://github.com/Komon502/POP-Dino",
         },
-        {
-            title: "thai-shop-review",
-            image: "/img/GitHub.png",
-            delay: 600,
-            link: "https://github.com/Komon502/thai-shop-review",
-        },
     ];
 
     const certificates = [
