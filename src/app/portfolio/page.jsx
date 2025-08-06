@@ -49,7 +49,7 @@ function PortfolioPage() {
             image: "/project/img1.png",
             link: "https://github.com/Komon502/thai-shop-review",
             description: "Full Stack Thai store review web app with Next.js, Tailwind, Node.js and MySQL.",
-            detailedDescription: "These are additional projects I built to practice various skills such as Web App development, IoT, Game, Dashboards, and more. I collaborated on these projects with Supachai Butsua. I was responsible for the Full Stack Development, while Supachai handled UX/UI Design and Frontend Development.",
+            detailedDescription: "Thai_Shop_Review is a blog-style website for reviewing shops and restaurants in Thailand. Users can browse reviews, ratings, and photos.I handled the Full Stack development, including backend APIs, database, and frontend integration.This project was a collaboration with Supachai Butsua, who focused on UX/UI design and frontend.",
             techStack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
             features: [
                 "User authentication and authorization",
