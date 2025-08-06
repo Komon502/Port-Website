@@ -157,14 +157,28 @@ function PortfolioPage() {
                             >
                                 <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
 
-                                <div className="relative w-full h-[180px] mb-4 bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
-                                    <div className="text-gray-400 text-center">
-                                        <div className="w-20 h-20 mx-auto mb-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                            <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M3,3H21V21H3V3M4,4V20H20V4H4M6,6H18V8H6V6M6,10H18V12H6V10M6,14H18V16H6V14Z"/>
+                                <div className="relative w-full h-[180px] mb-4 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 rounded-lg overflow-hidden">
+                                    {/* Animated background */}
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10 transform -skew-x-12 animate-pulse"></div>
+                                    
+                                    {/* Content */}
+                                    <div className="relative h-full flex flex-col items-center justify-center text-white p-4">
+                                        <div className="w-16 h-16 mb-3 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2M11 7H13V9H11V7M11 11H13V17H11V11Z"/>
                                             </svg>
                                         </div>
-                                        <span className="text-sm">Click to view details</span>
+                                        <span className="text-sm font-semibold text-center">{project.title}</span>
+                                        <span className="text-xs text-blue-200 mt-1">Click to view details</span>
+                                    </div>
+                                    
+                                    {/* Tech stack preview */}
+                                    <div className="absolute bottom-2 left-2 right-2">
+                                        <div className="flex justify-center gap-1">
+                                            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                                            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -237,15 +251,39 @@ function PortfolioPage() {
                         </div>
                         
                         <div className="p-6">
-                            {/* Project Image */}
-                            <div className="relative w-full h-64 mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                <div className="text-white text-center">
-                                    <div className="w-24 h-24 mx-auto mb-4 bg-white bg-opacity-20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                                        <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M3,3H21V21H3V3M4,4V20H20V4H4M6,6H18V8H6V6M6,10H18V12H6V10M6,14H18V16H6V14Z"/>
-                                        </svg>
+                            {/* Project Preview */}
+                            <div className="relative w-full h-64 mb-6 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl overflow-hidden">
+                                {/* Animated background pattern */}
+                                <div className="absolute inset-0">
+                                    <div className="absolute top-4 left-4 w-32 h-32 bg-white bg-opacity-10 rounded-full blur-xl"></div>
+                                    <div className="absolute bottom-6 right-6 w-24 h-24 bg-white bg-opacity-10 rounded-full blur-lg"></div>
+                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white bg-opacity-5 rounded-full blur-2xl"></div>
+                                </div>
+                                
+                                {/* Mock browser window */}
+                                <div className="relative h-full p-6 flex flex-col">
+                                    <div className="bg-white bg-opacity-15 rounded-lg p-4 backdrop-blur-sm flex-1 flex flex-col">
+                                        {/* Browser header */}
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                                            <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                                            <div className="flex-1 bg-white bg-opacity-20 rounded ml-2 h-6 flex items-center px-3">
+                                                <span className="text-white text-xs opacity-70">{selectedProject.title}.app</span>
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Mock content */}
+                                        <div className="flex-1 flex flex-col justify-center items-center text-white">
+                                            <div className="w-16 h-16 mb-3 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center">
+                                                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2M11 7H13V9H11V7M11 11H13V17H11V11Z"/>
+                                                </svg>
+                                            </div>
+                                            <h4 className="text-lg font-bold mb-1">{selectedProject.title}</h4>
+                                            <p className="text-sm text-center opacity-80">Full Stack Application</p>
+                                        </div>
                                     </div>
-                                    <span className="text-lg font-semibold">{selectedProject.title}</span>
                                 </div>
                             </div>
 
