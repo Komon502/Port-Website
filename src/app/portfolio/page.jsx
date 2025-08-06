@@ -132,16 +132,6 @@ function PortfolioPage() {
                 {/* Other Projects Section */}
                 <section className="mb-20">
                     <h2 className="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Other Projects</h2>
-                    <p
-                        className="text-center text-gray-300 mb-12 max-w-2xl mx-auto text-lg"
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                    >
-                        These are additional projects I built to practice various skills such as Web App development, IoT, Game, Dashboards, and more.
-                        I collaborated on these projects with <span className="text-white font-semibold">Supachai Butsua</span>.
-                        I was responsible for the <span className="text-white font-semibold">Full Stack Development</span>, while Supachai handled <span className="text-white font-semibold">UX/UI Design</span> and <span className="text-white font-semibold">Frontend Development</span>.
-                    </p>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {otherProjects.map((project, index) => (
                             <div
@@ -178,6 +168,15 @@ function PortfolioPage() {
                             </div>
                         ))}
                     </div>
+                    <p
+                        className="text-center text-gray-300 mt-12 max-w-2xl mx-auto text-lg"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        These are additional projects I built to practice various skills such as Web App development, IoT, Game, Dashboards, and more.
+                        I collaborated on these projects with <span className="text-white font-semibold">Supachai Butsua</span>.
+                        I was responsible for the <span className="text-white font-semibold">Full Stack Development</span>, while Supachai handled <span className="text-white font-semibold">UX/UI Design</span> and <span className="text-white font-semibold">Frontend Development</span>.
+                    </p>
                 </section>
 
                 {/* Report Project Section */}
