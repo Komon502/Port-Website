@@ -10,7 +10,26 @@ function PortfolioPage() {
         console.log("AOS initialized");
     }, []);
 
-    const projects = [
+    const collaborationProjects = [
+        {
+            title: "thai-shop-review",
+            image: "/project/img1.png",
+            link: "https://github.com/Komon502/thai-shop-review",
+            description: "Full Stack Thai store review web app with Next.js, Tailwind, Node.js and MySQL.",
+            detailedDescription: "Thai_Shop_Review is a blog-style website for reviewing shops and restaurants in Thailand. Users can browse reviews, ratings, and photos.I handled the Full Stack development, including backend APIs, database, and frontend integration.This project was a collaboration with Supachai Butsua, who focused on UX/UI design and frontend.",
+            techStack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
+            features: [
+                "User authentication and authorization",
+                "Shop review and rating system",
+                "Responsive design for mobile and desktop",
+                "Database integration with MySQL",
+                "RESTful API development"
+            ],
+            delay: 400,
+        },
+    ];
+
+    const githubProjects = [
         {
             title: "Mobile App Project",
             image: "/img/GitHub.png",
@@ -43,25 +62,6 @@ function PortfolioPage() {
         { src: "/certificate/C9.png", title: "Crash Course on Python", delay: 1100 },
     ];
 
-    const otherProjects = [
-        {
-            title: "thai-shop-review",
-            image: "/project/img1.png",
-            link: "https://github.com/Komon502/thai-shop-review",
-            description: "Full Stack Thai store review web app with Next.js, Tailwind, Node.js and MySQL.",
-            detailedDescription: "Thai_Shop_Review is a blog-style website for reviewing shops and restaurants in Thailand. Users can browse reviews, ratings, and photos.I handled the Full Stack development, including backend APIs, database, and frontend integration.This project was a collaboration with Supachai Butsua, who focused on UX/UI design and frontend.",
-            techStack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
-            features: [
-                "User authentication and authorization",
-                "Shop review and rating system",
-                "Responsive design for mobile and desktop",
-                "Database integration with MySQL",
-                "RESTful API development"
-            ],
-            delay: 400,
-        },
-    ];
-
     const openModal = (project) => {
         setSelectedProject(project);
         document.body.style.overflow = 'hidden';
@@ -88,66 +88,11 @@ function PortfolioPage() {
                     </p>
                 </header>
 
-                {/* Projects Section */}
+                {/* Project Collaboration Section - Most Important */}
                 <section className="mb-20">
-                    <h2 className="text-3xl font-semibold mb-8 text-center">Projects</h2>
+                    <h2 className="text-3xl font-semibold mb-8 text-center">Project Collaboration</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {projects.map((project, index) => (
-                            <div
-                                key={index}
-                                className="p-5 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-750 transition-all duration-300 hover:scale-105"
-                            >
-                                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block"
-                                >
-                                    <div className="relative w-full h-[180px] mb-4 bg-gray-700 rounded-lg flex items-center justify-center">
-                                        <div className="text-gray-400 text-center">
-                                            <div className="w-16 h-16 mx-auto mb-2 bg-gray-600 rounded-lg flex items-center justify-center">
-                                                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1.9 1.6 2.5 1.2 3.2.9.1-.7.3-1.2.5-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .1.9-.3 1.8-.4 2.7-.4s1.8.1 2.7.4c2.1-.4 3-.1 3-.1.6 1</svg>.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.6.8.6 1.7v2.6c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.65 18.35.5 12 .5z" />
-                                                </svg>
-                                            </div>
-                                            <span className="text-sm">GitHub Project</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
-                {/* Certificates Section */}
-                <section className="mb-20">
-                    <h2 className="text-3xl font-semibold mb-8 text-center">Certificates</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {certificates.map((cert, index) => (
-                            <div
-                                key={index}
-                                className="p-5 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-750 transition-all duration-300"
-                            >
-                                <h3 className="text-lg font-semibold mb-4">{cert.title}</h3>
-                                <div className="relative w-full h-[180px] mb-4 bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
-                                    <img
-                                        src={cert.src}
-                                        alt={cert.title}
-                                        className="object-contain w-full h-full"
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
-
-                {/* Other Projects Section */}
-                <section className="mb-20">
-                    <h2 className="text-3xl font-semibold</svg> mb-8 text-center">Other Projects</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {otherProjects.map((project, index) => (
+                        {collaborationProjects.map((project, index) => (
                             <div
                                 key={index}
                                 className="p-5 bg-gray-800 rounded-xl shadow-lg flex flex-col hover:bg-gray-750 transition-all duration-300 hover:scale-105 cursor-pointer"
@@ -202,27 +147,95 @@ function PortfolioPage() {
                     </div>
                 </section>
 
-                {/* Report Project Section */}
+                {/* GitHub Code Projects Section */}
+                <section className="mb-20">
+                    <h2 className="text-3xl font-semibold mb-8 text-center">GitHub Code Projects</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {githubProjects.map((project, index) => (
+                            <div
+                                key={index}
+                                className="p-5 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-750 transition-all duration-300 hover:scale-105"
+                            >
+                                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block"
+                                >
+                                    <div className="relative w-full h-[180px] mb-4 bg-gray-700 rounded-lg flex items-center justify-center">
+                                        <div className="text-gray-400 text-center">
+                                            <div className="w-16 h-16 mx-auto mb-2 bg-gray-600 rounded-lg flex items-center justify-center">
+                                                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1.9 1.6 2.5 1.2 3.2.9.1-.7.3-1.2.5-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .1.9-.3 1.8-.4 2.7-.4s1.8.1 2.7.4c2.1-.4 3-.1 3-.1.6 1.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.6.8.6 1.7v2.6c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.65 18.35.5 12 .5z" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm">GitHub Project</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Certificates Section */}
+                <section className="mb-20">
+                    <h2 className="text-3xl font-semibold mb-8 text-center">Certificates</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {certificates.map((cert, index) => (
+                            <div
+                                key={index}
+                                className="p-5 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-750 transition-all duration-300"
+                            >
+                                <h3 className="text-lg font-semibold mb-4">{cert.title}</h3>
+                                <div className="relative w-full h-[180px] mb-4 bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
+                                    <img
+                                        src={cert.src}
+                                        alt={cert.title}
+                                        className="object-contain w-full h-full"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* University Graduation Project Section */}
                 <section>
-                    <h2 className="text-3xl font-semibold mb-8 text-center">Report Project</h2>
+                    <h2 className="text-3xl font-semibold mb-8 text-center">University Graduation Project</h2>
                     <div className="flex flex-col items-center">
-                        <p className="mb-4 text-lg text-center">
-                            Click the button below to view or download my project report.
-                        </p>
+                        <div className="max-w-2xl text-center mb-6">
+                            <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 3L1 9L5 11.18V17.18C5 19.54 8.58 21 12 21C15.42 21 19 19.54 19 17.18V11.18L21 10.09V17H23V9L12 3M18.82 9L12 12.72L5.18 9L12 5.28L18.82 9M17 15.99C17 17.1 14.84 18 12 18C9.16 18 7 17.1 7 15.99V12.27L12 15L17 12.27V15.99Z" />
+                                </svg>
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4 text-white">Final Year Capstone Project</h3>
+                            <p className="text-lg text-gray-300 mb-6">
+                                Click the buttons below to view or download my university graduation project report.
+                            </p>
+                        </div>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
                                 href="https://docs.google.com/document/d/1WqO9eqs6Nzo_qIdC8trYYkZSp9HGBnk4I_0lIUq-_Bg/edit?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow transition duration-300"
+                                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow transition duration-300 flex items-center gap-2"
                             >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                                </svg>
                                 View Report
                             </a>
                             <a
                                 href="https://docs.google.com/document/d/1WqO9eqs6Nzo_qIdC8trYYkZSp9HGBnk4I_0lIUq-_Bg/edit?usp=sharing"
                                 download
-                                className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow transition duration-300"
+                                className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow transition duration-300 flex items-center gap-2"
                             >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                                </svg>
                                 Download Report
                             </a>
                         </div>
@@ -360,4 +373,4 @@ function PortfolioPage() {
     );
 }
 
-export default PortfolioPage;
+export default PortfolioPage;       
