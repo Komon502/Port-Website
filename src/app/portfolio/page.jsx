@@ -468,22 +468,6 @@ function PortfolioPage() {
                                 </p>
                             </div>
 
-                            {/* Trust Badges */}
-                            <div className="grid md:grid-cols-3 gap-4 mb-8">
-                                <div className="bg-gray-700 rounded-xl p-4 text-center">
-                                    <div className="text-yellow-300 text-2xl font-bold">10K+</div>
-                                    <div className="text-gray-300 text-sm">สินค้าคุณภาพ</div>
-                                </div>
-                                <div className="bg-gray-700 rounded-xl p-4 text-center">
-                                    <div className="text-green-300 text-2xl font-bold">100+</div>
-                                    <div className="text-gray-300 text-sm">หมวดหมู่</div>
-                                </div>
-                                <div className="bg-gray-700 rounded-xl p-4 text-center">
-                                    <div className="text-pink-300 text-2xl font-bold">24/7</div>
-                                    <div className="text-gray-300 text-sm">ดูแลลูกค้า</div>
-                                </div>
-                            </div>
-
                             {/* Tech Stack */}
                             {selectedProject.techStack && (
                                 <div className="mb-6">
