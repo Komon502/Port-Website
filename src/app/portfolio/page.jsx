@@ -31,8 +31,8 @@ function PortfolioPage() {
             title: "KSK Shope website Eccommerce",
             image: "/project/KSK.png",
             link: "https://github.com/Komon502/My-Ecommerce-main",
-            description: "นี่คือร้าน KSK Shop เป็น website ที่ผมและเพื่อนอีก 2 คนช่วยกันทำขึ้นมา",
-            detailedDescription: "พวกเราได้ออกแบบ website ecommerce เพื่อเป็น medium project โดยใช้ tech stack และ feature ตามที่แสดงในภาพ",
+            description: "This is KSK Shop, a website that two of my friends and I created together.",
+            detailedDescription: "Our very first e-commerce website is KSK Shop. We had a plan to open our own store, so we decided to try programming it. Komon, our CEO, took charge of the Full Stack development, while Supacha, as CTO, handled the technology and Front-End UX/UI. Lastly, Kasidetch became the CMO, specializing in finance and investment, and took on the role of leading marketing and business strategy.However, this is only a dream and just a prototype. We wrote code, searched for information in Facebook groups, bought code from others, and studied shared code — learning about languages, data, structures — and combined everything with AI to reduce effort. This is how KSK Shop came to be.",
             techStack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
             features: [
                 "User authentication (Login & Register)",
