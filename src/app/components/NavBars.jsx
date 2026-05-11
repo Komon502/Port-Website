@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { Phone, Menu, X } from 'lucide-react';
 
 const NavBars = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,16 +30,7 @@ const NavBars = () => {
                 {/* Desktop Contact Info */}
                 <div className="hidden md:flex text-white">
                     <a href="tel:+66923959606" className="hover:text-blue-500 flex items-center">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="24px"
-                            viewBox="0 -960 960 960"
-                            width="24px"
-                            fill="#FFFFFF"
-                            className="mr-2"
-                        >
-                            <path d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-80h400v-480H280v480Zm0-560h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z"></path>
-                        </svg>
+                        <Phone className="w-5 h-5 mr-2" />
                         Tel 092-395-9606
                     </a>
                 </div>

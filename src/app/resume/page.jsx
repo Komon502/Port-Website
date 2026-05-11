@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Download, FileText, Award, Briefcase, GraduationCap, Calendar, Mail, Phone, MapPin } from 'lucide-react';
+import { Download, FileText, Award, Briefcase, GraduationCap, Calendar, Mail, Phone, MapPin, Database, Cpu } from 'lucide-react';
 import NavBars from '../components/NavBars';
 
 function Resume() {

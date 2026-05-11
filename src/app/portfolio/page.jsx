@@ -18,7 +18,7 @@ function PortfolioPage() {
             image: "/project/img1.png",
             link: "https://github.com/Komon502/thai-shop-review",
             description: "Full Stack Thai store review web app with Next.js, Tailwind, Node.js and MySQL.",
-            detailedDescription: "Thai_Shop_Review is a blog-style website for reviewing shops and restaurants in Thailand. Users can browse reviews, ratings, and photos.I handled the Full Stack development, including backend APIs, database, and frontend integration.This project was a collaboration with Supachai Butsua, who focused on UX/UI design and frontend.",
+            detailedDescription: "Thai_Shop_Review is a blog-style website for reviewing shops and restaurants in Thailand. Users can browse reviews, ratings, and photos.I handled Full Stack development, including backend APIs, database, and frontend integration.This project was a collaboration with Supachai Butsua, who focused on UX/UI design and frontend.",
             techStack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
             features: [
                 "User authentication and authorization",
@@ -30,11 +30,11 @@ function PortfolioPage() {
             delay: 400,
         },
         {
-            title: "KSK Shope website Eccommerce",
+            title: "KSK Shop website Eccommerce",
             image: "/project/KSK.png",
             link: "https://github.com/Komon502/My-Ecommerce-main",
             description: "This is KSK Shop, a website that two of my friends and I created together.",
-            detailedDescription: "Our very first e-commerce website is KSK Shop. We had a plan to open our own store, so we decided to try programming it. Komon, our CEO, took charge of the Full Stack development, while Supacha, as CTO, handled the technology and Front-End UX/UI. Lastly, Kasidetch became the CMO, specializing in finance and investment, and took on the role of leading marketing and business strategy.However, this is only a dream and just a prototype. We wrote code, searched for information in Facebook groups, bought code from others, and studied shared code — learning about languages, data, structures — and combined everything with AI to reduce effort. This is how KSK Shop came to be.",
+            detailedDescription: "Our very first e-commerce website is KSK Shop. We had a plan to open our own store, so we decided to try programming it. Komon, our CEO, took charge of Full Stack development, while Supacha, as CTO, handled technology and Front-End UX/UI. Lastly, Kasidetch became CMO, specializing in finance and investment, and took on the role of leading marketing and business strategy.However, this is only a dream and just a prototype. We wrote code, searched for information in Facebook groups, bought code from others, and studied shared code — learning about languages, data, structures — and combined everything with AI to reduce effort. This is how KSK Shop came to be.",
             techStack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL"],
             features: [
                 "User authentication (Login & Register)",
@@ -395,13 +395,91 @@ function PortfolioPage() {
                         >
                             <div className="relative h-64 bg-gradient-to-br from-orange-600 via-red-600 to-purple-600 overflow-hidden">
                                 {/* Animated background */}
+                                <div className="absolute inset-0">
+                                    <div className="absolute top-8 left-8 w-32 h-32 bg-white bg-opacity-10 rounded-full blur-xl animate-pulse"></div>
+                                    <div className="absolute bottom-8 right-8 w-24 h-24 bg-white bg-opacity-10 rounded-full blur-lg animate-pulse delay-1000"></div>
+                                </div>
+                                
+                                {/* Thesis icon */}
+                                <div className="relative h-full flex items-center justify-center">
+                                    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8 transform hover:scale-110 transition-transform duration-300">
+                                        <BookOpen className="w-16 h-16 text-white" />
+                                    </div>
+                                </div>
+                                
+                                {/* Badge */}
+                                <div className="absolute top-8 right-8">
+                                    <span className="bg-orange-500 text-white text-sm px-3 py-1 rounded-full font-semibold">
+                                        Graduation Project
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div className="p-8">
+                                <h3 className="text-2xl font-bold text-white mb-4 text-center">
+                                    Final Year Capstone Project
+                                </h3>
+                                <p className="text-gray-300 text-lg mb-8 text-center leading-relaxed">
+                                    Explore my comprehensive university graduation project report, showcasing advanced research, 
+                                    technical implementation, and academic excellence in computer science.
+                                </p>
+                                
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                                    <div className="text-center">
+                                        <div className="text-3xl font-bold text-orange-400 mb-2">A+</div>
+                                        <div className="text-sm text-gray-400">Grade</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-3xl font-bold text-blue-400 mb-2">6 Months</div>
+                                        <div className="text-sm text-gray-400">Duration</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-3xl font-bold text-purple-400 mb-2">100+</div>
+                                        <div className="text-sm text-gray-400">Pages</div>
+                                    </div>
+                                </div>
+                                
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a
+                                        href="https://docs.google.com/document/d/1WqO9eqs6Nzo_qIdC8trYYkZSp9HGBnk4I_0lIUq-_Bg/edit?usp=sharing"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
+                                    >
+                                        <BookOpen className="w-5 h-5" />
+                                        View Report
+                                    </a>
+                                    <a
+                                        href="https://docs.google.com/document/d/1WqO9eqs6Nzo_qIdC8trYYkZSp9HGBnk4I_0lIUq-_Bg/edit?usp=sharing"
+                                        download
+                                        className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
+                                    >
+                                        <Award className="w-5 h-5" />
+                                        Download Report
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </motion.section>
+            </div>
+
+            {/* Modal */}
+            {selectedProject && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
                     <div
                         className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-sm"
                         onClick={closeModal}
                     ></div>
-                    <div className="relative bg-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                    <div className="relative bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                        {/* Header */}
                         <div className="sticky top-0 bg-gray-800 px-6 py-4 border-b border-gray-700 flex justify-between items-center rounded-t-2xl">
-                            <h3 className="text-2xl font-bold text-white">{selectedProject.title}</h3>
+                            <h3 className="text-2xl font-bold text-white flex items-center gap-2">
+                                <span className="px-2 py-1 rounded-md bg-gradient-to-br from-orange-500 to-pink-500 text-white text-sm font-bold">
+                                    KSK
+                                </span>
+                                {selectedProject.title}
+                            </h3>
                             <button
                                 onClick={closeModal}
                                 className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
@@ -477,7 +555,7 @@ function PortfolioPage() {
                             {selectedProject.features && (
                                 <div className="mb-6">
                                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                    <ul className="grid md:grid-cols-2 gap-y-2 text-gray-300 list-disc list-inside">
                                         {selectedProject.features.map((feature, index) => (
                                             <li key={index}>{feature}</li>
                                         ))}
@@ -502,9 +580,7 @@ function PortfolioPage() {
                                     rel="noopener noreferrer"
                                     className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
                                 >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1.9 1.6 2.5 1.2 3.2.9.1-.7.3-1.2.5-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .1.9-.3 1.8-.4 2.7-.4s1.8.1 2.7.4c2.1-.4 3-.1 3-.1.6 1.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.6.8.6 1.7v2.6c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.65 18.35.5 12 .5z" />
-                                    </svg>
+                                    <Github className="w-5 h-5" />
                                     View on GitHub
                                 </a>
                                 <button
@@ -518,133 +594,8 @@ function PortfolioPage() {
                     </div>
                 </div>
             )}
-            {/* Modal KSK Shop*/}
-            {selectedProject && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-                    <div
-                        className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-sm"
-                        onClick={closeModal}
-                    ></div>
-                    <div className="relative bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-
-                        {/* Header */}
-                        <div className="sticky top-0 bg-gray-800 px-6 py-4 border-b border-gray-700 flex justify-between items-center rounded-t-2xl">
-                            <h3 className="text-2xl font-bold text-white flex items-center gap-2">
-                                <span className="px-2 py-1 rounded-md bg-gradient-to-br from-orange-500 to-pink-500 text-white text-sm font-bold">
-                                    KSK
-                                </span>
-                                {selectedProject.title}
-                            </h3>
-                            <button
-                                onClick={closeModal}
-                                className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
-                            >
-                                <X className="w-6 h-6 text-gray-400 hover:text-white" />
-                            </button>
-                        </div>
-
-                        <div className="p-6">
-                            {/* Project Preview */}
-                            <div className="relative w-full h-64 mb-6 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl overflow-hidden">
-                                {/* Animated background pattern */}
-                                <div className="absolute inset-0">
-                                    <div className="absolute top-4 left-4 w-32 h-32 bg-white bg-opacity-10 rounded-full blur-xl"></div>
-                                    <div className="absolute bottom-6 right-6 w-24 h-24 bg-white bg-opacity-10 rounded-full blur-lg"></div>
-                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white bg-opacity-5 rounded-full blur-2xl"></div>
-                                </div>
-
-                                {/* Mock browser window */}
-                                <div className="relative h-full p-6 flex flex-col">
-                                    <div className="bg-white bg-opacity-15 rounded-lg p-4 backdrop-blur-sm flex-1 flex flex-col overflow-hidden">
-                                        {/* Browser header */}
-                                        <div className="flex items-center gap-2 mb-4">
-                                            <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                                            <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                                            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                                            <div className="flex-1 bg-white bg-opacity-20 rounded ml-2 h-6 flex items-center px-3">
-                                                <span className="text-white text-xs opacity-70">ksk-shop.app</span>
-                                            </div>
-                                        </div>
-
-                                        {/* Project image content */}
-                                        <div className="flex-1 flex items-center justify-center">
-                                            <img
-                                                src={selectedProject.image}
-                                                alt={selectedProject.title}
-                                                className="max-h-full max-w-full rounded-lg object-contain"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Project Description */}
-                            <div className="mb-6">
-                                <h4 className="text-lg font-semibold text-white mb-3">About This Project</h4>
-                                <p className="text-gray-300 leading-relaxed mb-4">
-                                    {selectedProject.description}
-                                </p>
-                                <p className="text-gray-300 leading-relaxed">
-                                    {selectedProject.detailedDescription}
-                                </p>
-                            </div>
-
-                            {/* Tech Stack */}
-                            {selectedProject.techStack && (
-                                <div className="mb-6">
-                                    <h4 className="text-lg font-semibold text-white mb-3">Tech Stack</h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {selectedProject.techStack.map((tech, index) => (
-                                            <span
-                                                key={index}
-                                                className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-
-                            {/* Features */}
-                            {selectedProject.features && (
-                                <div className="mb-6">
-                                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                                    <ul className="grid md:grid-cols-2 gap-y-2 text-gray-300 list-disc list-inside">
-                                        {selectedProject.features.map((feature, index) => (
-                                            <li key={index}>{feature}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-
-                            {/* Action Buttons */}
-                            <div className="flex gap-4">
-                                <a
-                                    href={selectedProject.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1.9 1.6 2.5 1.2 3.2.9.1-.7.3-1.2.5-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .1.9-.3 1.8-.4 2.7-.4s1.8.1 2.7.4c2.1-.4 3-.1 3-.1.6 1.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.6.8.6 1.7v2.6c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.65 18.35.5 12 .5z" />
-                                    </svg>
-                                    View on GitHub
-                                </a>
-                                <button
-                                    onClick={closeModal}
-                                    className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
-                                >
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-
         </div>
     );
 }
 
-export default PortfolioPage;       
+export default PortfolioPage;
