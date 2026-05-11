@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@typescript-eslint/parser": "^8.59.2",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
     "javascript-obfuscator": "^4.1.1",
