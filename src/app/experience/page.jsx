@@ -68,12 +68,12 @@ function ExperiencePage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-            
+
             {/* Hero Section */}
             <section className="relative overflow-hidden py-20 px-4">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 opacity-30"></div>
                 <div className="container mx-auto relative z-10">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -85,10 +85,10 @@ function ExperiencePage() {
                         <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 mb-12" data-aos="fade-up" data-aos-delay="200">
                             A journey through professional growth, entrepreneurship, and continuous learning
                         </p>
-                        
+
                         {/* Quick Stats */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20"
                             >
@@ -96,7 +96,7 @@ function ExperiencePage() {
                                 <div className="text-3xl font-bold text-white">4+</div>
                                 <div className="text-sm text-gray-300">Companies</div>
                             </motion.div>
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20"
                             >
@@ -104,7 +104,7 @@ function ExperiencePage() {
                                 <div className="text-3xl font-bold text-white">2+</div>
                                 <div className="text-sm text-gray-300">Years</div>
                             </motion.div>
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20"
                             >
@@ -112,7 +112,7 @@ function ExperiencePage() {
                                 <div className="text-3xl font-bold text-white">10+</div>
                                 <div className="text-sm text-gray-300">Skills</div>
                             </motion.div>
-                            <motion.div 
+                            <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20"
                             >
@@ -127,7 +127,7 @@ function ExperiencePage() {
 
             {/* Experience Content */}
             <div className="container mx-auto px-4 pb-20">
-                <motion.section 
+                <motion.section
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -137,7 +137,7 @@ function ExperiencePage() {
                         Professional <span className="text-blue-500">Journey</span>
                     </h2>
                     <div className="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
-                    
+
                     <div className="space-y-16">
                         {experiences.map((exp, index) => (
                             <motion.div
@@ -170,19 +170,18 @@ function ExperiencePage() {
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         {/* Type Badge */}
                                         <div className="flex items-center">
-                                            <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                                                exp.type === 'retail' ? 'bg-blue-600' :
-                                                exp.type === 'freelance' ? 'bg-green-600' :
-                                                exp.type === 'business' ? 'bg-purple-600' :
-                                                'bg-orange-600'
-                                            } text-white`}>
+                                            <span className={`px-3 py-1 rounded-full text-xs font-semibold ${exp.type === 'retail' ? 'bg-blue-600' :
+                                                    exp.type === 'freelance' ? 'bg-green-600' :
+                                                        exp.type === 'business' ? 'bg-purple-600' :
+                                                            'bg-orange-600'
+                                                } text-white`}>
                                                 {exp.type === 'retail' ? 'Retail' :
-                                                 exp.type === 'freelance' ? 'Freelance' :
-                                                 exp.type === 'business' ? 'Business' :
-                                                 'E-commerce'}
+                                                    exp.type === 'freelance' ? 'Freelance' :
+                                                        exp.type === 'business' ? 'Business' :
+                                                            'E-commerce'}
                                             </span>
                                         </div>
                                     </div>
@@ -212,12 +211,12 @@ function ExperiencePage() {
 
                                     {/* Image */}
                                     {exp.image && (
-                                        <div className="relative rounded-xl overflow-hidden h-80">
+                                        <div className="relative rounded-xl overflow-hidden h-64 bg-gray-950 flex items-center justify-center">
                                             <Image
                                                 src={exp.image}
                                                 alt={exp.imageDesc || exp.role}
                                                 fill
-                                                className={`object-cover ${exp.imagePosition}`}
+                                                className={`object-contain ${exp.imagePosition}`}
                                                 sizes="100vw"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
