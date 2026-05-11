@@ -1,28 +1,22 @@
-import nextPlugin from "@next/eslint-plugin-next";
+import { FlatCompat } from "@eslint/eslintrc";
 import tsParser from "@typescript-eslint/parser";
 
-export default [
-  {
-    files: ["**/*.{js,jsx,ts,tsx}"],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      "@next/next": nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs["core-web-vitals"].rules,
-    },
-  },
-  {
-    ignores: [".next/**", "out/**", "build/**"],
-  },
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals"),
 ];
+
+// Fix parser configuration
+eslintConfig.forEach(config => {
+  if (config.languageOptions && config.languageOptions.parser) {
+    config.languageOptions.parser = tsParser;
+  }
+  if (config.parser && typeof config.parser === 'function') {
+    delete config.parser;
+  }
+});
+
+export default eslintConfig;
