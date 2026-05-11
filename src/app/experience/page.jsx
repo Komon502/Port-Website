@@ -137,7 +137,7 @@ function ExperiencePage() {
                     </h2>
                     <div className="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
                     
-                    <div className="space-y-12">
+                    <div className="space-y-16">
                         {experiences.map((exp, index) => (
                             <motion.div
                                 key={index}
@@ -145,7 +145,7 @@ function ExperiencePage() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 whileHover={{ scale: 1.02 }}
-                                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-xl border border-gray-700 overflow-hidden group"
+                                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden group hover:border-blue-500 transition-all duration-300"
                             >
                                 <div className="p-8">
                                     {/* Header */}

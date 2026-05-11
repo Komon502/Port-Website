@@ -112,7 +112,7 @@ const NavBars = () => {
                             href="/about"
                             onClick={toggleMenu}
                         >
-                            👨‍💼 About
+                            � About
                         </a>
                         <a 
                             className="text-white hover:text-blue-500 py-3 px-4 rounded-lg hover:bg-gray-800 transition-all duration-200 text-lg border-b border-gray-700 last:border-b-0" 
@@ -140,7 +140,7 @@ const NavBars = () => {
                             href="/Follow"
                             onClick={toggleMenu}
                         >
-                            👥 Follow Me
+                            🌟 Follow Me
                         </a>
                         <a 
                             className="text-white hover:text-blue-500 py-3 px-4 rounded-lg hover:bg-gray-800 transition-all duration-200 text-lg" 
