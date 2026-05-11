@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Download, FileText, Award, Briefcase, GraduationCap, Calendar, Mail, Phone, MapPin, Database, Cpu } from 'lucide-react';
-import NavBars from '../components/NavBars';
 
 function Resume() {
     useEffect(() => {
@@ -13,7 +12,6 @@ function Resume() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-            <NavBars />
             
             {/* Hero Section */}
             <section className="relative overflow-hidden min-h-screen flex items-center" style={{

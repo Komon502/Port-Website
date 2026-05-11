@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Github, Linkedin, Instagram, Facebook, Twitter, Youtube, Mail, Globe, Heart } from 'lucide-react';
-import NavBars from '../components/NavBars';
 
 const FollowPage = () => {
     useEffect(() => {

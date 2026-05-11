@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Code, Database, Cpu, Zap, Award, Target } from 'lucide-react';
-import NavBars from '../components/NavBars';
 
 function AboutPage() {
     useEffect(() => {
@@ -13,7 +12,6 @@ function AboutPage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-            <NavBars />
             
             {/* Hero Section */}
             <section className="relative overflow-hidden bg-cover bg-center min-h-screen flex items-center" style={{ backgroundImage: "url('/img/BG2.jpg')" }}>

@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { X, Github, ExternalLink, Award, BookOpen, Code } from "lucide-react";
-import NavBars from '../components/NavBars';
 
 function PortfolioPage() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -104,7 +103,6 @@ function PortfolioPage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-            <NavBars />
             
             {/* Hero Section */}
             <section className="relative overflow-hidden py-20 px-4">

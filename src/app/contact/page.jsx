@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageSquare } from 'lucide-react';
-import NavBars from '../components/NavBars';
 
 function ContactPage() {
     const [formData, setFormData] = useState({
@@ -34,7 +33,6 @@ function ContactPage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-            <NavBars />
             
             {/* Hero Section */}
             <section className="relative overflow-hidden py-20 px-4">
