@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Briefcase, Calendar, MapPin, ExternalLink, Award, TrendingUp } from 'lucide-react';
+import { Briefcase, Calendar, Award, TrendingUp } from 'lucide-react';
 
 function ExperiencePage() {
     useEffect(() => {
@@ -20,6 +20,7 @@ function ExperiencePage() {
             logo: "/Experience/7-eleven.png",
             image: "/Experience/1.jpg",
             imageDesc: "Working atmosphere at 7-Eleven",
+            imagePosition: "object-center",
             delay: 400,
             skills: ["Customer Service", "Retail Operations", "Cash Management", "Store Organization"],
             type: "retail"
@@ -32,6 +33,7 @@ function ExperiencePage() {
             logo: "/Experience/fastwork.png",
             image: "/Experience/6.png",
             imageDesc: "My profile at Fastwork",
+            imagePosition: "object-top",
             delay: 500,
             skills: ["Web Development", "UI/UX Design", "Frontend", "React", "Next.js"],
             type: "freelance"
@@ -44,6 +46,7 @@ function ExperiencePage() {
             logo: "/Experience/amway.png",
             image: "/Experience/ABO.png",
             imageDesc: "Business networking and entrepreneurship",
+            imagePosition: "object-center",
             delay: 600,
             skills: ["Business Development", "Network Marketing", "Customer Relations", "Sales"],
             type: "business"
@@ -56,6 +59,7 @@ function ExperiencePage() {
             logo: "/Experience/amway.png",
             image: "/Experience/MyStore.png",
             imageDesc: "My store, BodyFuel Lab, offers a wide range of premium nutrition and wellness products",
+            imagePosition: "object-top",
             delay: 700,
             skills: ["E-commerce", "Product Management", "Digital Marketing", "Customer Service"],
             type: "ecommerce"
@@ -123,7 +127,6 @@ function ExperiencePage() {
 
             {/* Experience Content */}
             <div className="container mx-auto px-4 pb-20">
-                {/* Work Experience Section */}
                 <motion.section 
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -209,16 +212,15 @@ function ExperiencePage() {
 
                                     {/* Image */}
                                     {exp.image && (
-                                        <div className="relative rounded-xl overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
+                                        <div className="relative rounded-xl overflow-hidden h-80">
                                             <Image
                                                 src={exp.image}
                                                 alt={exp.imageDesc || exp.role}
-                                                width={800}
-                                                height={400}
-                                                className="object-cover w-full h-80"
+                                                fill
+                                                className={`object-cover ${exp.imagePosition}`}
                                                 sizes="100vw"
                                             />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
                                             {exp.imageDesc && (
                                                 <div className="absolute bottom-4 left-4 right-4">
                                                     <p className="text-sm text-gray-300 bg-black bg-opacity-50 backdrop-blur-sm rounded-lg p-2">
