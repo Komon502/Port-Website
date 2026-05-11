@@ -155,7 +155,6 @@ const FollowPage = () => {
                                         <Globe className="w-4 h-4 mr-2" />
                                         {item.username}
                                     </div>
-                                </div>
                                 
                                 {/* Hover Effect */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
