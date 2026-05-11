@@ -216,7 +216,7 @@ function ExperiencePage() {
                                                 alt={exp.imageDesc || exp.role}
                                                 width={800}
                                                 height={400}
-                                                className="object-cover w-full h-64"
+                                                className="object-cover w-full h-80"  {/* เพิ่มจาก h-64 เป็น h-80 */}
                                                 sizes="100vw"
                                             />
                                             {exp.imageDesc && (
