@@ -75,7 +75,6 @@ const FollowPage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-            <NavBars />
             
             {/* Hero Section */}
             <section className="relative overflow-hidden py-20 px-4">
