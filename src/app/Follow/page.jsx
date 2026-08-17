@@ -9,7 +9,7 @@ const FollowPage = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
-
+// asdwdqwqw
     const socialLinks = [
         { 
             href: "https://www.facebook.com/profile.php?id=100057163688530", 
@@ -174,7 +174,7 @@ const FollowPage = () => {
                             Let's Connect! 🤝
                         </h3>
                         <p className="text-gray-200 mb-6 leading-relaxed">
-                            Whether you're interested in collaboration, have a question, or just want to say hello, 
+                            Whether you're interested ins collaboration, have a question, or just want to say hello, 
                             I'm always open to connecting with fellow developers and enthusiasts.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
